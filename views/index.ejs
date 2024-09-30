@@ -8,12 +8,17 @@
   <body>
     <h2><%= title %></h2>
     <% messages.map((msg,index)=>{ %>
-    <li>
-      <span>User <%= msg.user %></span>
-      <span>Text <%= msg.text %></span>
-      <span>Added On <%= msg.added %></span>
-      <a href="<%=index %>"><button>Details of the message</button></a>
-    </li>
+    <ul>
+      <li>
+        ID :-(<%=msg.id%>)
+        <ol>
+          <li>Username :- <%= msg.username %></li>
+          <li>Text :- <%= msg.message %></li>
+          <li>Added On :- <%= msg.added %></li>
+          <a href="<%=msg.id %>"><button>Details of the message</button></a>
+        </ol>
+      </li>
+    </ul>
 
     <%}) %>
 
