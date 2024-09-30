@@ -19,11 +19,11 @@ async function main() {
   console.log("SEDDING");
   try {
     const client = new Client({
-      host: "localhost",
-      user: "postgres",
-      database: "top_users",
-      password: "nokiaasha",
-      port: 5432,
+       host: process.env.HOST,
+  user: process.env.USER,
+  database: process.env.DATABASE,
+  password: process.env.PASSWORD,
+  port: process.env.PORT
     });
     await client.connect();
     await client.query(table);
