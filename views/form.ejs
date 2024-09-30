@@ -6,9 +6,12 @@
   </head>
   <body>
     <form action="/new" method="post">
-      <input type="text" name="user" id="Username" placeholder="user name" />
-      <input type="text" name="text" id="UserText" placeholder="some text.." />
+      <label for="name">Enter Name : </label>
+      <input type="text" name="user" id="Username" />
+      <label for="text">Enter Text : </label>
+      <input type="text" name="text" id="UserText" />
       <button type="submit">Submit</button>
     </form>
+    <%-include('./partials/error')%>
   </body>
 </html>
