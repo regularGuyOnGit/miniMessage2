@@ -3,7 +3,7 @@ const app = express();
 const path = require("node:path");
 const logger = require("morgan");
 const messageRouter = require("./router/messages");
-require('dotenv').configure()
+require('dotenv').config()
 
 app.use(logger());
 app.set("views", path.join(__dirname, "views"));
