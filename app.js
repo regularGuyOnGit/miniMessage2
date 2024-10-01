@@ -3,6 +3,7 @@ const app = express();
 const path = require("node:path");
 const logger = require("morgan");
 const messageRouter = require("./router/messages");
+require('dotenv').configure()
 
 app.use(logger());
 app.set("views", path.join(__dirname, "views"));
@@ -11,6 +12,6 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use("/", messageRouter);
 
-app.listen(3000, () => {
+app.listen(process.env.PORT || 3000, () => {
   console.log("Server running on 3000");
 });
