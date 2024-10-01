@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const path = require("node:path");
 const logger = require("morgan");
+require("dotenv").config();
 const messageRouter = require("./router/messages");
 require('dotenv').config()
 

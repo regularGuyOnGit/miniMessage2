@@ -40,6 +40,9 @@ const post_users_form = [
 const get_user = async (req, res) => {
   // some query to the db
   const intId = parseInt(req.params.id, 10);
+  console.log(intId);
+  console.log(typeof intId);
+  console.log(Number.isInteger(intId));
   const [user] = await db.getUser(intId);
 
   console.log(user);
